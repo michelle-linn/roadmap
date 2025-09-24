@@ -1,0 +1,62 @@
+/* CSS is for styling */
+body {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    text-align: left;
+}
+
+.dropdown-btn:after {
+    content: '▼';
+    float: right;
+    margin-left: 8px;
+    font-size: 0.8em;
+    color: #888;
+}
+
+.dropdown.open .dropdown-btn:after {
+  content: "▲";
+}
+
+.dropdown-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none; /*Hidden by default*/
+    position: absolute;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    z-index: 10;
+}
+
+.dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-item.selected {
+    background-color: #e0e0e0;
+    font-weight: bold;
+}
+
+.dropdown.open .dropdown-list {
+    display: block;
+}
