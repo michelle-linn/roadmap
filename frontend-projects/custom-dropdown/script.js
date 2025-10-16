@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // "Run this function every time the button is clicked"
     // e is the event object
 	btn.addEventListener('click', function(e) {
-        // changes the state of the dropdown when clicked
-        // adds the class 'open' to classList if not present, removes it if present
+        // changes the state of the dropdown when clicked by:
+        // adding the class 'open' to classList if not present, removes it if present
 		dropdown.classList.toggle('open');
 	});
 
